@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário</title>
+</head>
+<body>
+    <header>
+        <nav>
+
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Formulário</h2>
+            <!---->
+            <form method="post" id="formularioTeste" action="mailto:contato@servidor.com">
+                <fieldset>
+                    <legend>Dados pessoais:</legend>
+                    <label for="ForNome">Nome:</label><!--br para colocar na linha de baixo-->
+                    <input id="ForNome" type="text" name="nome" size="50" autocomplete="off" required><!--br para colocar na linha de baixo-->
+                </fieldset>
+
+                <br/><br/>
+
+                <fieldset>
+                    <legend>Informações extras:</legend>
+                    <p>Selecione a sua região:</p>
+                    <input id="ForZN" type="radio" name="regiao" value="ZN">
+                    <label for="ForZN">Zona Norte</label><br/>
+    
+                    <input id="ForZO" type="radio" name="regiao" value="ZO">
+                    <label for="ForZO">Zona Oeste</label><br/>
+    
+                    <input id="ForZL" type="radio" name="regiao" value="ZL">
+                    <label for="ForZL">Zona Leste</label><br/>
+    
+                    <input id="ForZS" type="radio" name="regiao" value="ZS">
+                    <label for="ForZS">Zona Sul</label>
+    
+                    <br/><br/>
+    
+                    <p>Quais os meios de transporte que você utiliza:</p>
+                    <input id="ForBic" type="checkbox" name="transporte" value="bike">
+                    <label for="ForBic">Bicicleta</label><br/>
+    
+                    <input id="ForOni" type="checkbox" name="transporte" value="onibus">
+                    <label for="ForOni">Ônibus</label><br/>
+    
+                    <input id="ForApp" type="checkbox" name="transporte" value="Aplicativo">
+                    <label for="ForApp">Aplicativo</label><br/>
+    
+                    <input id="ForTax" type="checkbox" name="transporte" value="taxi">
+                    <label for="ForTax">Taxi</label><br/>
+    
+                    <br/><br/>
+    
+                    <label for="time">Selecione seu time:</label>
+                    <select id="time" name="time">
+                        <option value="nenhum">Nenhum</option>
+                        <option value="cruzeiro">Cruzeiro</option>
+                        <option value="Sao_Paulo">São Paulo</option>
+                        <option value="corinthians">Corinthians</option>
+                        <option value="gremio">Grêmio</option>
+                        <option value="palmeiras">Palmeiras</option>
+                        <option value="santos">Santos</option>
+                    </select>
+
+                    <br/><br/>
+
+                    <label for="ForCid">Escolha a sua cidade na lista:</label>
+                    <input id="ForCid" list="cidade" name="cidade" placeholder="Sua cidade">
+                    <datalist id="cidade">
+                        <option value="Sâo Paulo"></option>
+                        <option value="Campinas"></option>
+                        <option value="Santos"></option>
+                        <option value="Osasco"></option>
+                    </datalist>
+                </fieldset>
+
+                <br/><br/>
+
+                <fieldset>
+                    <legend>Comentários</legend>
+                    <p>Sugestões, elogios e criticas:</p>
+                    <textarea name="mensagem" rows="10" cols="50" placeholder="Deixei sua mensagem aqui!" required></textarea>
+                </fieldset>
+
+                <br/>
+
+                <input type="submit" value="enviar">
+
+            </form>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Instituto da Oportunidade Social</p>
+    </footer>
+</body>
+</html>
