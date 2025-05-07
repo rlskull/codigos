@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html{
+            font-size: 62, 5%;
+        }
+        section{
+            /* background-color: #c87878; */
+            width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .containerPai{
+            /*background-color: aquamarine;*/
+            width: 500px;
+            height: 600px;
+            border-radius: 30px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*O texto do parágrafo com a classe cxServicos não está ficando abaixo da imagem porque o contêiner .txtImg está configurado com display: flex e justify-content: center. Isso faz com que os elementos filhos (o <figure> e o <p>) sejam alinhados horizontalmente, lado a lado, dentro do contêiner.*/
+            flex-direction: column; 
+            /* Se você mudar a direção do flex para column, os papéis se invertem:
+	•	justify-content vira o eixo vertical,
+	•	align-items vira o horizontal. */
+         
+      
+        }
+
+        figure{
+            background-color: azure;
+            width: 400px;
+            height: 400px;
+            border-radius: 30px;
+        }
+
+        p.txt{
+            text-align: justify;
+            padding: 5px 40px 0 40px;
+            /* padding: 1vw 5vw 0 5vw; */
+            font-size: 1rem;
+        }
+
+        .ajImg{
+            width: 100%; /* medida relativa */
+            height: 100%; /* medida relativa */
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section>
+            <div class="containerPai">
+               <figure>
+                    <img class="ajImg" src="/IMG/Sem título-12.png" alt="mulher negra negando">
+                    <figcaption>Mulher negra</figcaption>
+               </figure>
+               <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa corporis eveniet impedit rerum nihil alias aliquid eligendi dolore quisquam maiores totam ea atque possimus, optio asperiores, doloremque nam sunt facere. lorem</p>
+            </div>
+            <div class="containerPai">
+                <figure>
+                    <img class="ajImg" src="/IMG/Sem título-12.png" alt="mulher negra negando">
+                    <figcaption>Mulher negra</figcaption>
+                </figure>
+                <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa corporis eveniet impedit rerum nihil alias aliquid eligendi dolore quisquam maiores totam ea atque possimus, optio asperiores, doloremque nam sunt facere.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
