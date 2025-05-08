@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Finalizando Float</title>
+    <style>
+        section#part1{
+            border: 1px solid blue;
+            width: 100%;
+            float: left;
+        }
+
+        .esquerda{
+            background-color: #c87878;
+            margin: 5px;
+            width: 50px;
+            height: 150px;
+            float: left;
+        }
+
+        .direita{
+            background-color: #78c8a8;
+            margin: 5px;
+            width: 50px;
+            height: 150px;
+            float: right;
+        }
+
+        .testeA01{
+            border: 3px solid blue;
+            width: 100px;
+            height: 50px; 
+            margin: 10px;
+            float: left;
+        }
+
+        .testeA02{
+            border: 1px solid red;
+        }
+
+        /*Usando o clear*/
+        .testeB01{
+            border: 3px solid blue;
+            width: 100px;
+            height: 50px; 
+            margin: 10px;
+            float: left;
+        }
+        .testeB02{
+            border: 1px solid red;
+            clear: left; /* Limpa o float à esquerda */
+        }
+    </style>
+</head>
+<body>
+    <section id="part1">
+        <div class="esquerda">1</div>
+        <div class="esquerda">2</div>
+        <div class="direita">3</div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus aperiam quaerat id est molestias deleniti ad eaque asperiores quo error in dolores hic blanditiis, voluptatum libero ducimus repellat ipsum veniam.</p>
+    </section>
+
+    <!--Usando o elemento clear-->
+    <section>
+        <h2>Sem clear</h2>
+        <div class="testeA01">NOME</div>
+        <div class="testeA02">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, necessitatibus voluptatibus. Veritatis tenetur consectetur rerum numquam nam praesentium neque laudantium nulla labore quae dolorum dolore tempore, enim, laboriosam exercitationem? Fugiat.</div>
+
+        <br><br>
+
+        <h2>Sem clear</h2>
+        <div class="testeB01">NOME</div>
+        <div class="testeB02">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, necessitatibus voluptatibus. Veritatis tenetur consectetur rerum numquam nam praesentium neque laudantium nulla labore quae dolorum dolore tempore, enim, laboriosam exercitationem? Fugiat.</div>
+    </section>
+    
+</body>
+</html>
