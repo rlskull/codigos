@@ -2,31 +2,32 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Finalizando Float</title>
+    <title>Corrigindo erro do float e pseudoclasses</title>
     <style>
-        section#part1{
-            border: 1px solid blue;
-            width: 100%;
-            float: left;
-        }
-
-        .esquerda{
+header{
             background-color: #c87878;
-            margin: 5px;
-            width: 50px;
-            height: 150px;
+            width: 1000px;
+            height: 50px;
+            margin: auto;
+        }
+
+        #direita{
+            background-color: #78c8a8;
+            width: 350px;
+            height: 50px;
+            float: right;
+            padding: 20px 0 0 20px;
+            box-sizing: border-box; /* Adiciona o preenchimento ao tamanho total do elemento */
+        }
+        #esquerda{
+            background-color: #788dc8;
+            width: 250px;
+            height: 50px;
             float: left;
         }
 
-        .direita{
-            background-color: #78c8a8;
-            margin: 5px;
-            width: 50px;
-            height: 150px;
-            float: right;
-        }
-
-        .testeA01{
+           /*Usando o clear*/
+           .testeA01{
             border: 3px solid blue;
             width: 100px;
             height: 50px; 
@@ -38,8 +39,7 @@
             border: 1px solid red;
         }
 
-        /*Usando o clear*/
-        .testeB01{
+           .testeB01{
             border: 3px solid blue;
             width: 100px;
             height: 50px; 
@@ -50,15 +50,41 @@
             border: 1px solid red;
             clear: left; /* Limpa o float à esquerda */
         }
+
+          /*Pseudo-classes*/
+
+          a:link {
+            color: #d4d7d3; /* Cor padrão para links não visitados */
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #df4141; /* Cor para links visitados */
+        }
+
+        a:hover {
+            color: #e567b1; /* Cor ao passar o mouse */
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: #ec7d51; /* Cor ao clicar no link */
+        }
     </style>
 </head>
 <body>
-    <section id="part1">
-        <div class="esquerda">1</div>
-        <div class="esquerda">2</div>
-        <div class="direita">3</div>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus aperiam quaerat id est molestias deleniti ad eaque asperiores quo error in dolores hic blanditiis, voluptatum libero ducimus repellat ipsum veniam.</p>
-    </section>
+    <header>
+        <div id="direita">
+            <nav>
+                <a href="#">Link 1</a> |
+                <a href="#">Link 2</a> |
+                <a href="#">Link 3</a> |
+                <a href="#">Link 4</a>
+            </nav>
+        </div>
+        <div id="esquerda"></div>
+        </div>
+    </header>
 
     <!--Usando o elemento clear-->
     <section>
@@ -72,6 +98,5 @@
         <div class="testeB01">NOME</div>
         <div class="testeB02">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, necessitatibus voluptatibus. Veritatis tenetur consectetur rerum numquam nam praesentium neque laudantium nulla labore quae dolorum dolore tempore, enim, laboriosam exercitationem? Fugiat.</div>
     </section>
-    
 </body>
 </html>
