@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo Prático com VH e VW</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: sans-serif;
+    }
+
+    /* 1. HERO SECTION - ocupa a altura da tela inteira */
+    .hero {
+      height: 100vh; /* 100% da altura da janela */
+      background: linear-gradient(to bottom, #00c6ff, #0072ff);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 5vw; /* Responsivo com a largura da tela */
+    }
+
+    .hero p {
+      font-size: 2vw; /* Também responsivo */
+    }
+
+    /* 2. MENU LATERAL FIXO */
+    .menu-lateral {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 20vw;  /* 20% da largura da tela */
+      height: 100vh; /* 100% da altura da tela */
+      background-color: #111;
+      color: white;
+      padding: 2vh; /* padding relativo à altura */
+    }
+
+    .menu-lateral ul {
+      list-style: none;
+      margin-top: 10vh; /* dá espaço do topo */
+    }
+
+    .menu-lateral li {
+      margin-bottom: 2vh;
+    }
+
+    /* 3. CONTEÚDO CENTRALIZADO APÓS O HERO */
+    .conteudo {
+      margin-left: 20vw; /* espaço para o menu lateral */
+      padding: 5vh 5vw;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .box-central {
+      height: 60vh;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px dashed #0072ff;
+    }
+
+    .box-central p {
+      font-size: 3vw;
+      color: #0072ff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MENU LATERAL FIXO -->
+  <nav class="menu-lateral">
+    <h2>Menu</h2>
+    <ul>
+      <li>Início</li>
+      <li>Sobre</li>
+      <li>Contato</li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Bem-vindo!</h1>
+    <p>Essa seção ocupa 100vh e se adapta à largura da tela (vw).</p>
+  </section>
+
+  <!-- CONTEÚDO CENTRALIZADO -->
+  <section class="conteudo">
+    <div class="box-central">
+      <p>Centralizado com 60vh</p>
+    </div>
+  </section>
+
+</body>
+</html>

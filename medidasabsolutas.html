@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*At-rules  declarações com instruções de como o CSS irá se comportar */
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+        html{
+            font-size: 16px; /*Tamanho padrão da fonte do elemento raiz*/
+            font-family: "Pacifico", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @media screen and (max-width: 1000px) {
+            body{
+                background-color: lightcoral;
+            }
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <!--Medidas relativas-->
+    <!--em | Relativo ao tamanho da fonte do elemento pai-->
+    <!--Melhor para tamanhos relativos ao elemento pai-->
+
+    .paiEm <style></style>
+
+    <div class="paiEM" style="font-size: 16px;">
+        Texto do pai
+        <div class="filhoEm" style="font-size: 2em;"> <!--2 vezes o tamanho da fonte do elemento pai-->
+            Texto do filho
+        </div>
+    </div>
+
+    <hr>
+
+    <!--rem | Sucessor do EM. Relativo ao elemento raiz root elemento <html>-->
+    <!--Melhor para tamanhos consistentes em toda a página-->
+    <div class="paiRem" style="font-size: 20px;">
+        Texto do pai
+        <div class="filhoRem" style="font-size: 2rem;"> <!--2 vezes o tamanho da fonte do elemento raiz-->
+            Texto do filho
+        </div>
+    </div>
+
+    <hr>
+
+    <!--% | Relativo ao tamanho do elemento pai-->
+    <!--Útil para tamanhos relativos ao pai, mas menos comim para fontes.-->
+    <!-- <div class="paiPorc" style="font-size: 20px;">
+        Texto do pai -->
+        <div class="filhoPorc" style="font-size: 500%;"> <!--200% do tamanho da fonte do elemento pai-->
+            <!--100% é igual o tamanho da fonte do elemento pai-->
+            Texto do filho
+        </div>
+    <!-- </div> -->
+
+    <hr>
+
+    <!--vw (viewport width) é uma das medidas mais atuais, que ditam o futuro do CSS-->
+    <!-- vh e vw | Relativas ao tamanho da janela de visualização-->
+    <!--Útil para layouts responsivos baseados no tamanho da janela-->
+    <!--vh | 1% da altura da janela de visualização-->
+    <!--vw | 1% da largura da janela de visualização-->
+    <div class="paiVh" style="font-size: 20px;">
+        Texto do pai
+        <div class="filhoVh" style="font-size: 10vh;"> <!--10% da altura da janela de visualização-->
+            Texto do filho
+        </div>
+    </div>
+
+</body>
+</html>
