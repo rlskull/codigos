@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Medidas Absolutas e Relativas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Medida Absoluta */
+        .absoluto {
+            width: 400px; /* Largura fixa em pixels */
+            height: 200px; /* Altura fixa em pixels */
+            background-color: lightblue;
+            text-align: center;
+            line-height: 200px; /* Centraliza verticalmente */
+            font-size: 20px; /* Tamanho fixo da fonte */
+            margin: 20px auto; /* Centraliza horizontalmente */
+        }
+
+        /* Medida Relativa - VW */
+        .relativo-vw {
+            width: 50vw; /* 50% da largura da janela de visualização */
+            height: 20vh; /* 20% da altura da janela de visualização */
+            background-color: lightcoral;
+            text-align: center;
+            line-height: 20vh; /* Centraliza verticalmente */
+            font-size: 2vw; /* Tamanho da fonte relativo à largura da janela */
+            margin: 20px auto;
+        }
+
+        /* Medida Relativa - EM */
+        .relativo-em {
+            width: 30em; /* 30 vezes o tamanho da fonte do elemento pai */
+            height: 10em; /* 10 vezes o tamanho da fonte do elemento pai */
+            background-color: lightgreen;
+            text-align: center;
+            line-height: 10em; /* Centraliza verticalmente */
+            font-size: 1.5em; /* 1.5 vezes o tamanho da fonte do elemento pai */
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="absoluto">Medida Absoluta (400px x 200px)</div>
+    <div class="relativo-vw">Medida Relativa (VW e VH)</div>
+    <div class="relativo-em">Medida Relativa (EM)</div>
+
+</body>
+</html>
